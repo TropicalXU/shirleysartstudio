@@ -28,6 +28,7 @@ even more enthusiastic art lovers who can now get in touch from anywhere in the 
 * MongoDB Atlas
 * ExpressJS
 * NodeJS
+* Stripe Developer
 </br>
 
 ## Stripe Developer
