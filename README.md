@@ -30,10 +30,10 @@ even more enthusiastic art lovers who can now get in touch from anywhere in the 
 * NodeJS
 </br>
 
-## Stripe
+## Stripe Developer
 ***
 
-Stripe Developer was used within the store feature of the site to collect payment information. Thi was achieved using Stripe's Payment Link tools. The owner of the website can then recieve secure payouts directly to their bank account with each sale.
+Stripe Developer Tools were used within the store feature of the site to securely collect payment information from the buyer. This was achieved using Stripe's Payment Link Tools which were added to the Paintings mongoose model database. The owner of the website can recieve secure payouts directly to their bank account with each sale.
 Payment and billing information is available for the owner to retrieve using their Stripe account so that shipments can take place.
 
 </br>
