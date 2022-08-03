@@ -41,23 +41,13 @@ Payment and billing information is available for the owner to retrieve using the
 
 ## Website Images
 ***
-<img width="1436" alt="Screen Shot 2022-07-25 at 7 24 27 PM" src="https://user-images.githubusercontent.com/100976172/182674369-d1c6126e-13ad-433f-a610-f4b12242ede7.png">
-<img width="1343" alt="Screen Shot 2022-07-29 at 9 05 53 PM" src="https://user-images.githubusercontent.com/100976172/182674450-abb475cc-37bc-4e55-965a-683f9b7bd311.png">
-<img width="1342" alt="Screen Shot 2022-07-29 at 9 07 08 PM" src="https://user-images.githubusercontent.com/100976172/182674460-84844b5e-5d9d-4279-b7d4-4dd3d798559f.png">
-<img width="1343" alt="Screen Shot 2022-07-29 at 9 07 58 PM" src="https://user-images.githubusercontent.com/100976172/182674470-e9cc4471-1315-4422-9055-2028c2f0296f.png">
-<img width="1436" alt="Screen Shot 2022-07-25 at 7 25 17 PM" src="https://user-images.githubusercontent.com/100976172/182674517-8bcbcadd-887e-4913-aef0-aa006d32fb99.png">
-<img width="1098" alt="Screen Shot 2022-07-29 at 8 47 49 PM" src="https://user-images.githubusercontent.com/100976172/18267453<img width="1436" alt="Screen Shot 2022-07-25 at 7 24 27 PM" src="https://user-images.githubusercontent.com/100976172/182674369-d1c6126e-13ad-433f-a610-f4b12242ede7.png">
-<img width="1343" alt="Screen Shot 2022-07-29 at 9 05 53 PM" src="https://user-images.githubusercontent.com/100976172/182674450-abb475cc-37bc-4e55-965a-683f9b7bd311.png">
-<img width="1342" alt="Screen Shot 2022-07-29 at 9 07 08 PM" src="https://user-images.githubusercontent.com/100976172/182674460-84844b5e-5d9d-4279-b7d4-4dd3d798559f.png">
-<img width="1343" alt="Screen Shot 2022-07-29 at 9 07 58 PM" src="https://user-images.githubusercontent.com/100976172/182674470-e9cc4471-1315-4422-9055-2028c2f0296f.png">
-<img width="1436" alt="Screen Shot 2022-07-25 at 7 25 17 PM" src="https://user-images.githubusercontent.com/100976172/182674517-8bcbcadd-887e-4913-aef0-aa006d32fb99.png">
-<img width="1098" alt="Screen Shot 2022-07-29 at 8 47 49 PM" src="https://user-images.githubusercontent.com/100976172/182674531-31dc711a-6efb-4f37-b0b6-bc3433ee22df.png">
-<img width="596" alt="Screen Shot 2022-07-29 at 9 10 39 PM" src="https://user
-<img width="1435" alt="Screen Shot 2022-07-25 at 7 26 23 PM" src="https://user-images.githubusercontent.com/100976172/182674594-e0f7986c-a7cf-465f-a9a4-c15c9424b501.png">
--images.githubusercontent.com/100976172/182674556-187b1260-bbf5-4ef6-a2ac-032ce96e3368.png">1-31dc711a-6efb-4f37-b0b6-bc3433ee22df.png">
-<img width="596" alt="Screen Shot 2022-07-29 at 9 10 39 PM" src="https://user
-<img width="1435" alt="Screen Shot 2022-07-25 at 7 26 23 PM" src="https://user-images.githubusercontent.com/100976172/182674594-e0f7986c-a7cf-465f-a9a4-c15c9424b501.png">
--images.githubusercontent.com/100976172/182674556-187b1260-bbf5-4ef6-a2ac-032ce96e3368.png">
+<img width="1090" alt="Screen Shot 2022-07-29 at 9 03 48 PM" src="https://user-images.githubusercontent.com/100976172/182675169-1bdd3815-3033-4140-bfc2-54f1e08f45b9.png">
+<img width="1343" alt="Screen Shot 2022-07-29 at 9 05 53 PM" src="https://user-images.githubusercontent.com/100976172/182675196-3545cd8f-0575-4e9a-aecf-b36bd42c523b.png">
+<img width="1342" alt="Screen Shot 2022-07-29 at 9 07 08 PM" src="https://user-images.githubusercontent.com/100976172/182675225-d3f3c2a0-09b2-46c9-ad50-59ed721437be.png">
+<img width="1343" alt="Screen Shot 2022-07-29 at 9 07 58 PM" src="https://user-images.githubusercontent.com/100976172/182675235-375909ff-65bc-4f03-8554-24a15e816cb7.png">
+<img width="1098" alt="Screen Shot 2022-07-29 at 8 47 49 PM" src="https://user-images.githubusercontent.com/100976172/182675258-fb834ab5-279d-4173-abba-75598f3224f4.png">
+<img width="1435" alt="Screen Shot 2022-07-25 at 7 26 23 PM" src="https://user-images.githubusercontent.com/100976172/182675294-ce9c0501-40a5-456c-950e-701eac23e3a8.png">
+<img width="596" alt="Screen Shot 2022-07-29 at 9 10 39 PM" src="https://user-images.githubusercontent.com/100976172/182675303-9c07d7d5-2035-4a4c-82a0-09782583c3d2.png">
 
 </br>
 </br>
