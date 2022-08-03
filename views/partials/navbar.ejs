@@ -1,0 +1,63 @@
+<!--website navbar partial-->
+<nav class="navbar container-fluid navbar navbar-fixed navbar-expand-lg py-2 px-3">
+  <a href="/"  id="navBrand">
+    <span class="mx-2 py-2">
+      Shirley's Art Studio
+    </span>
+  </a>
+  <a href="#" class="toggle-button my-3">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </a>
+  <div class="navbar-links">
+    <ul>
+      <li><a href="/">HOME</a></li>
+      <li>
+        <div class="dropdown">
+          <a class="dropbtn" data-dropdown-button href="/gallery">GALLERY <i class="fa-solid fa-angle-down"></i></a>
+          <div class="dropdown-content text-center">
+            <a href="/gallery/landscape">LANDSCAPES</a><hr>
+            <a href="/gallery/seascape">SEASCAPES</a><hr>
+            <a href="/gallery/floral">FLORAL</a>
+          </div>
+        </div>
+      </li>
+      <li><a id="" href="/about">ABOUT</a></li>
+      <li><a id="" href="/contact">CONTACT</a></li>
+       <!--cart implementation (not in use)for future use-->
+       <!-- <li><a href="/checkout"><i class="fa-solid fa-cart-arrow-down fa-lg"></i> -->
+        <!--if cart session exists show cart count-->
+       <% if(session.cart) {%> 
+      <!-- <span class="badge text-bg-dark" style="color: black;font-size: 12px;"><%= session.cart.totalQty %></span> -->
+      <% } %> 
+      </a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<!--NAVBAR TOGGLE BUTTON JAVASCRIPT CODE-->
+<script>
+   const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+ navbarLinks.classList.toggle('active')
+})
+ </script>
+
+<script> const currentLocation = location.href;
+    const menuItem = document.querySelectorAll('a');
+    const menuLength = menuItem.length;
+    for(let i = 0; i < menuLength; i ++) {
+        if(menuItem[i].href === currentLocation) {
+            menuItem[i].className = 'active'
+        }
+    }
+</script>
+ 
+
+
+
+

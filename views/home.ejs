@@ -1,0 +1,229 @@
+<!--HOME PAGE-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../home.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <title>Shirley's Studio</title>
+    <link class="icon" rel="icon" href="/images/logo.png" type="image/x-icon">
+</head>
+
+<body>
+<main class="wrapper">
+    
+  <div class="home-header p-3 mx-auto flex-column container-fluid mb-3 text-center text-white">
+      <header class="mb-auto nav-bg">
+        <div><!--HOME NAVBAR-->
+           <nav class="navbar container-fluid navbar navbar-expand-lg bg-transparent py-3 px-4">
+              <a href="/"  id="navBrand">
+              <span id="signatureTwo" style="color:rgb(255, 255, 255)" class="mx-2 py-2" id="signatureNav">
+                Shirley's Art Studio</span></a>
+              <a href="#" class="toggle-button my-4">
+               <span class="bar"></span>
+               <span class="bar"></span>
+               <span class="bar"></span>
+              </a>
+              <div class="navbar-links" style="color: rgb(166, 166, 166);">
+                <ul>
+                   <li><a href="/">HOME</a></li>
+                      <li>
+                         <div class="dropdown">
+                             <a id="" class="dropbtn" href="/gallery">GALLERY <i id="" class="fa-solid fa-angle-down"></i></a>
+                             <div class="dropdown-content text-center">
+                                <a href="/gallery/landscape" style="color: black;">LANDSCAPES</a><hr>
+                                <a href="/gallery/seascape" style="color: black;">SEASCAPES</a><hr>
+                                <a href="/gallery/floral" style="color: black;">FLORAL</a>
+                              </div>
+                           </div>
+                       </li>
+                    <li><a id="" href="/about">ABOUT</a></li>
+                    <li><a id="" href="/contact">CONTACT</a></li>
+                       <!--cart implementation (not in use)for future use-->
+                    <!-- <li><a href="/checkout"><i class="fa-solid fa-cart-arrow-down fa-lg"></i> -->
+                      <!--if cart session exists show cart count-->
+                      <% if(session.cart) {%> 
+                      <!-- <span class="badge text-bg-light" style="color: black;font-size: 12px;"><%= session.cart.totalQty %></span> -->
+                         <% } %> 
+                     </a></li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+      </header>
+      <!--MAIN HEADER INNER TEXT-->
+      <section class="px-3 my-5 py-5 home-head">
+          <h1 id="signature" class="my-5 home-text bounceIn" style="font-size: 90px;color: white;">Shirley's Art Studio</h1>
+          <p class="lead home-text py-3" style="font-weight: bolder;"> Welcome to Shirley's Art Studio! <br> Jump right in and explore my collection of paintings. <br>
+                Browse, shop and feel free to share my work with others!</p>
+          <a href="/gallery" class="btn btn-outline-light">View
+                Gallery</a>
+      </section>
+  </div>
+  <!--home page artist introduction-->
+ <section class="container-fluid mb-3">
+   <h1 class="pt-5 text-center mb-5" style="font-size: 60px;">Meet the Artist</h1>
+    <section class="container-fluid my-5 card-description col-10">
+      <div class="row">
+        <div class="col-md-6 px-5 order-1 order-md-1 my-auto  py-5">
+          <p class="lead" style="font-size: 20px;font-weight: bold;">Hi my name is Shirley Hackett and welcome to my online art studio. I am an Irish Artist from Kildare, Ireland. Please feel free to browse and enjoy my works. If you have any querys feel free to <a href="/contact">contact me.</a></p>
+          <div class="container-fluid py-5">
+            <a href="/about" class="btn main-btn">READ MORE <i class="fa-solid fa-chevron-right"></i></a>
+          </div>
+        </div>
+        <div class="col-md-6 order-2 order-md-2 card mx-auto">
+          <div class="responsive">
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+
+   <!--home page gallery section-->         
+  <section class="container-fluid home-gallery-section bg py-5">
+    <h1 class="text-center" style="font-size: 60px;">Gallery</h1>
+    <p class="text-center pt-5 mx-5 px-5" style="font-size: 18px;">Discover my gallery where you will find all of my collections. Choose and browse any of the three categories.. Landscape, Seascape and Floral.</p>
+    <div class="row container-fluid d-flex justify-content-center py-3">
+      <a class="container-box-three d-flex align-items-center" href="/gallery" id="galleryOne">
+      </a>
+      <a class="container-box-three d-flex align-items-center" href="/gallery" id="galleryTwo">
+      </a>
+      <a class="container-box-three d-flex align-items-center" href="/gallery" id="galleryThree">
+      </a>
+    </div>
+    <div class="container d-flex justify-content-center py-2">
+      <a href="/gallery" class="btn main-btn mb-5" style="font-size: 15px;">VIEW GALLERY <i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+  </section>
+  <!--home page featured collections section-->
+  <section class="container-fluid section-collections bg py-5">
+    <h1 class="text-center" style="font-size: 60px;">Featured Collections</h1>
+    <div class="row container-fluid d-flex justify-content-center py-3">
+      <a class="container-box-three d-flex align-items-center" href="/gallery/landscape" id="landscape"><h2 class="mx-auto px-5 py-5" style="border: 2px solid white;color: white;">LANDSCAPE</h2>
+      </a>
+      <a class="container-box-three d-flex align-items-center" href="/gallery/seascape" id="seascape"><h2 class="mx-auto px-5 py-5" style="border: 2px solid white;color: white;">SEASCAPE</h2>
+      </a>
+      <a class="container-box-three d-flex align-items-center" href="/gallery/floral" id="floral"><h2 class="mx-auto px-5 py-5" style="border: 2px solid white;color: white;">FLORAL</h2>
+      </a>
+    </div>
+  </section>
+  <!--home page get in touch section-->       
+  <section class="mb-3 py-5">
+    <div class="container">
+      <h2 style="color: #023047;" class="text-center py-3" id="gradientText">Interested in my paintings?</h2>
+    </div>
+    <div class="container d-flex justify-content-center">
+      <a href="/contact" class="btn main-btn">GET IN TOUCH <i class="fa-solid fa-chevron-right"></i></a>
+    </div>
+  </section> 
+  <!--home page cookie consent pop up-->
+  <section id="consent-popup" class="hidden cookie-container">
+    <span class="close-btn">&times;</span>
+    <img src="/images/cookie.png" style="width: 80px; height:80px" alt="Consent cookie image">
+    <h3>Cookies and Privacy</h3>
+    <p>This website uses cookies to ensure optimal user experience on our website</p>
+    <a href="#" id="accept">Accept Cookies</a>
+    <p style="font-size: 8px;">By using this site you agree and have read our <a href="/legal/privacyPolicy">Privacy Policy</a>
+  </section>
+
+  <!--home page footer-->       
+  <section class="container-fluid col-lg-12 light-footer py-5">
+    <div class="container py-5">
+      <div class="row py-5">
+        <div class="col-4">
+          <h3 class="footer-signature pt-5" style="color: rgba(166, 166, 166, 0.875);">Shirley's Art Studio</h3>
+          <br> 
+        </div>
+        <div class="col-5 py-3">
+          <div class="row">
+            <div class="col">
+              <a class="py-2" href="/about" style="font-size: 18px;">Home</a><hr>
+              <div class="row py-2">
+                <a href="/about">About</a>
+                <a href="/contact">Contact</a>
+              </div>
+            </div>
+            <div class="col">
+              <a class="py-2" href="/gallery" style="font-size: 18px;">Gallery</a><hr>
+              <div class="row py-2">
+                <a href="/gallery/landscape">Landscape</a>
+                <a href="/gallery/seascape">Seascape</a>
+                <a href="/gallery/floral">Floral</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-3">
+          <h1 class="text-center" style="font-size: 1.3vw;color: rgba(166, 166, 166, 0.874);">Secure Payments</h1>
+          <div class="row">
+            <div class="col text-center py-3 my-3">
+              <img src="/images/stripe.png" class="img-fluid mx-3" style="width: 40px;height:40px;">
+              <img src="/images/visa.png" class="img-fluid" style="width: 40px;height:40px;">
+              <img src="/images/google-pay.png" class="img-fluid mx-3" style="width: 40px;height:40px;">
+              <img src="/images/apple-pay.png" class="img-fluid mx-3" style="width: 40px;height:40px;">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <a href="https://www.layerlabs.io"><img src="/images/layerLabsIcon.png" class="img-fluid" style="width: 30px; height:30px">
+        <span class="py-2 px-2" id="layerLabs" href="https://www.layerlabs.io" style="font-size: 10px;">Created & Designed by Layerlabs.io</span></a>
+      </div>
+      <hr>
+      <div class="container">
+        <div class="row container pt-3">
+          <div class="col">
+            <p style="font-size: 10px; font-weight: bold;">© 2022 Shirley's Art Studio. All rights reserved.</p>
+          </div>
+          <div class="col text-end" style="font-size: 10px;">
+            <a class="px-4" href='/legal/privacyPolicy'>Privacy Policy</a>
+            <a href="/legal/termsAndConditions">Terms of Use</a>
+            <a class="px-4" href="/legal/sales-and-refunds">Sales & Refunds</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+<!--HOME PAGE SCRIPT SECTION-->
+
+ <!--navbar toggle buttopn javascript code-->
+<script>
+   const toggleButton = document.getElementsByClassName('toggle-button')[0]
+   const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+   toggleButton.addEventListener('click', () => {
+      navbarLinks.classList.toggle('active')
+    })
+</script>
+
+
+<script>
+$(function () {
+$(document).scroll(function () {
+  var $nav = $("#mainNavbar");
+  $nav.toggleClass("scrolled", $(this).scrollTop() > $nav.height());
+});
+});
+</script>
+
+<script src="/javascripts/cookieConsent.js"></script>
+
+</main>
+</body>
+</html>

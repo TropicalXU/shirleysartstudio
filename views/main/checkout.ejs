@@ -1,0 +1,86 @@
+<!--checkout section not in use-->
+<!--ejs partials head/navbar/flash-->
+<%- include('../partials/head') %> 
+<%- include('../partials/navbar') %> 
+<%- include('../partials/flash') %> 
+
+
+<!--grabbing paintings/if paintings exist-->
+    <% if(paintings) {%> 
+<section class="container-fluid pb-5 pt-3">
+    <div class="row mx-3 checkout-bg">
+        <div class="col text-center py-4" style="background: rgba(0, 0, 0, 0.576);border-radius: 25px;">
+            <h1 class="py-5" style="color: rgba(255, 255, 255, 0.872); font-size: 60px;font-weight: bold;">Your Cart</h1>
+            <!-- <button type="button" class="btn btn-dark">Clear All</button> -->
+            <ul class="">
+                <!--looping over our paintings to display if cart session exists-->
+                <% paintings.forEach(function(painting){%> 
+                    <form action="/create-order" method="GET">
+                <li class="list-group-item product" value="<%= painting.item.id %> ">
+                    <div class="col container">
+                  <h4 class="py-3 title" value="<%= painting.item.title %>" style="color: white;"><%= painting.item.title %> </h4>
+                  <a href=""><img class="my-3 painting_img" alt="painting image" src="<%= painting.item.image %> " style="width: 100px;height:100px;border-radius: 15px;" id="checkoutImg"></a>
+                  </div>
+                  <h4 class="label label-success" style="color: white;">€ <%= painting.price %> </h4>
+                  <a  href="/remove/<%= painting.item.id %>"  class="my-3 remove" type="button" style="color: white;"><i class="fa-solid fa-trash-can fa-xl"></i></a>
+            
+                </li><hr style="color: white;">
+                <% }) %> 
+                <% if(totalPrice === 0){ %> 
+                    <div class="container py-5">
+                        <h1 class="pb-5" style="color: rgba(255, 255, 255, 0.871);font-size:30px;">YOUR CART IS EMPTY!</h1>
+                    <a href="/gallery" class=" btn btn-outline-light mb-5">VIEW GALLERY</a>
+                    <h4 id="signature" class="my-5" style="color: rgba(255, 255, 255, 0.863);">Shirley's Art Studio</h4>
+                    </div>
+                <% }else{ %> 
+            </ul>
+            <div class="row mt-5 py-3 mx-2">
+                <h4 style="color: white;" id="total" value="<%= totalPrice %> ">Total: € <%= totalPrice %> </h4>
+                 
+                  <!-- <div id="paypal-button-container"></div> -->
+   
+                    <button type="submit" id="checkout-button">Checkout</button>
+                  </form>
+                  <div id="paypal-button-container"></div>
+ 
+                
+                <div class="container">
+                    <h4 id="signature" class="py-3" style="color: rgba(255, 255, 255, 0.863);">Shirley's Art Studio</h4>
+                </div>
+           </div>
+           <% } %> 
+        </div>
+           <div class="col d-flex responsive text-center py-5">
+            <div class="row container-fluid py-5">
+            <h1 id="signature" style="font-size: 120px;color: rgba(255, 255, 255, 0.871);">Shirey's Art Studio</h1>
+            <p style="font-size: 40px;color:rgb(255, 255, 255);font-weight:bold;" class="px-5">Thank you for checking out my work!</p>
+            </div>
+     
+    </div>
+
+</section>
+<!--if paintings do not exist in cart session display==>-->
+<% }else {%> 
+    <section class="container-fluid wrapper pb-5 pt-3">
+        <div class="row mx-3 checkout-bg d-flex justify-content-center py-5" style="height: 90vh;">
+            <div class="col-md-6 d-flex justify-content-center align-items-center text-center py-5" style="background: rgba(0, 0, 0, 0.576);border-radius: 25px;">
+            <div class="row-md-6">
+            <h1 style="color: rgba(255, 255, 255, 0.863);">YOUR CART IS EMPTY</h1>
+            <h3 style="color: rgba(255, 255, 255, 0.863);" class="pt-3">Shop my work!</h3>
+            <a href="/gallery" class="btn btn-outline-light my-5">GALLERY</a>
+            <h4 id="signature" style="color: rgba(255, 255, 255, 0.863);">Shirley's Art Studio</h4>
+            </div>
+            </div>
+        </div>
+    </section>
+
+<% } %> 
+
+<!-- ejs partials cookie consent/scripts/footer-->
+
+<%- include('../partials/scripts') %> 
+<%- include('../partials/footer') %> 
+
+</main>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!--ejs partials head/navbar/flash-->
+<%- include('../partials/head') %> 
+<%- include('../partials/navbar') %> 
+<%- include('../partials/flash') %> 
+
+<!--contact form section-->
+<section class="container-fluid contact-page pb-5 pt-3">
+   <div class="row checkout-bg d-flex justify-content-center py-5 mx-3">
+      <div class="col-md-6 d-block align-items-center text-center py-3" style="background: rgba(0, 0, 0, 0.576);border-radius: 25px;">
+         <div class="row contact-container px-5 pl-5">
+            <h1 class="py-2" style="color: rgba(255, 255, 255, 0.863);">CONTACT</h1>
+            <p class="p-style">Interested in my paintings? Get in touch.</p>
+            <form action="/contact" method="POST" class="row contact-form validated-form contact" id="">
+              <div class="mb-3">
+                <label for="name" class="form-label">Fullname</label>
+                <input type="text" class="form-control contact" id="name" name="name" placeholder="Your Full Name" autofocus required>
+               </div>
+               <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="text" class="form-control contact" id="email" name="email" placeholder="Email" required>
+               </div>
+               <div class="mb-3">
+                 <label for="subject" class="form-label">Subject</label>
+                 <input type="text" class="form-control contact" id="subject" name="subject" placeholder="Subject" required>
+               </div>
+               <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control contact" id="text" name="text" rows="5" placeholder="Your Message" required></textarea>
+               </div>
+               <button class="btn btn-primary my-5" type="submit" id="submit" name="submit">Send <span><i class="fa-solid fa-paper-plane"></i></span></button> 
+            </form>
+            <h4 id="signature" class="py-3" style="color: rgba(255, 255, 255, 0.863);">Shirley's Art Studio</h4>
+         </div>
+      </div>
+   </div>
+</section>
+   
+
+<script>
+   (function () {
+    'use strict'
+
+    bsCustomFileInput.init()
+    
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    const forms = document.querySelectorAll('.validated-form')
+    
+    // Loop over them and prevent submission
+    Array.from(forms)
+    .forEach(function (form) {
+     form.addEventListener('submit', function (event) {
+       if (!form.checkValidity()) {
+         event.preventDefault()
+         event.stopPropagation()
+       }
+    
+       form.classList.add('was-validated')
+     }, false)
+    })
+    })()
+</script>
+<!--capturing form information to use with mailgun to email host-->
+<script>
+   $('form').on('submit', (e) => {
+      e.preventDefault();
+      const name = $('#name').val().trim();
+      const email = $('#email').val().trim();
+      const subject = $('#subject').val().trim();
+      const text = $('#message').val().trim();
+
+      const data = {
+         name,
+         email,
+         subject,
+         text
+      }
+
+      $.post('/contact', data, function() {
+         console.log('Server received our data')
+      });
+   });;
+  
+</script>
+<!-- ejs partials cookie consernt/scripts/footer-->
+<%- include('../partials/cookieConsent') %> 
+<%- include('../partials/scripts') %> 
+<%- include('../partials/footer') %> 
+
+</main>
+</body>
+</html>

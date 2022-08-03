@@ -1,0 +1,15 @@
+<!--flash partial success-->
+<% if(success && success.length) {%> 
+    <div class="container alert alert-success alert-dismissible fade show" role="alert">
+        <%= success %> <span><i class="fa-solid fa-lg fa-circle-check"></i></span>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" data-bs-target="#my-alert" aria-label="Close"></button>
+    </div>
+<% } %> 
+ 
+<!--flash partial error-->
+<% if(error && error.length) {%> 
+    <div class="container alert alert-danger alert-dismissible fade show" role="alert">
+        <%= error %> <span><i class="fa-solid fa-lg fa-circle-xmark"></i></span>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" data-bs-target="#my-alert" aria-label="Close"></button>
+    </div>
+ <% } %> 

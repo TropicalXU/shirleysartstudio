@@ -1,0 +1,535 @@
+html,body {
+    overflow-x: hidden; 
+    margin: auto;
+}
+
+/*responsive design for all device widths*/
+@media (min-width: 376px) {
+    .wrapper {width:100%;  margin: 0 auto; }  
+}
+
+@media (min-width: 390px){
+    .wrapper {width:100%;  margin: 0 auto; } 
+}
+
+@media (min-width: 576px) {
+    .wrapper {width:100%;  margin: 0 auto; } 
+}
+
+@media (min-width: 768px) {
+    .wrapper {width:100%;  margin: 0 auto; }  
+}
+
+@media(max-width: 1163px) {
+    .wrapper-main{width:60%}
+}
+
+@media (min-width: 1200px) {
+    .wrapper {width:100%;  margin: 0 auto; }
+}
+
+@media (min-width: 2000px) {
+    .wrapper {width:100%;  margin: 0 auto; }
+}
+
+@media (min-width: 3840px) {
+    .wrapper {width:100%; height: 100%;  margin: 0 auto; font-size: 100px; }
+}
+
+/*HOME STYLING*/
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a:link { text-decoration: none; }
+
+a {
+    font-family: 'Kanit', sans-serif;  
+}
+
+h1, h2, h3, h5 {
+    font-weight: 550;
+    font-family: 'Kanit', sans-serif;
+    color:#023047;
+}
+
+/*shirley's art studio signature fonts*/
+#signature {
+    font-family: 'Pacifico', cursive;
+    font-size: 80px;
+    opacity: .8;
+}
+
+#signatureTwo {
+    font-family: 'Marck Script', cursive;
+    font-weight: 600;
+}
+/*bounce in text */
+.bounceIn{
+    animation: bounceIn 2s;
+}
+/*bounce in animation*/
+@keyframes bounceIn {
+    0%{
+      transform: scale(1);
+      opacity: 0;
+    }
+    
+    60%{
+      transform: scale(.9);
+      opacity: 1;
+    }
+   
+    100%{
+      transform: scale(1.0);
+    }
+} 
+/* responsive images */
+.responsive {
+    height: auto;
+    width: 100%;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-top: 0px;
+    border-radius: 25px;
+    padding: 8px;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content li a {
+    color: rgb(255, 255, 255);
+    border-radius: 25px;
+    padding: 12px 16px;
+    margin: 10px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    color: #000;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+    color: black;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background:transparent;}
+
+/*Get in touch section background*/
+.dark-section {
+    color: #023047;
+    background:#f8f9fa;
+   
+}
+/* NAVBAR */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+/*navbar brand styling*/
+#navBrand {
+    color: rgb(255, 255, 255);
+    font-family:  'Kanit', sans-serif;
+    padding: 0px 5px;
+    font-size: 30px;
+    font-weight: 400;
+}
+/*navbar styling*/
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    z-index:9999;
+    position:relative
+}
+/*nav logo styling*/
+#navLogo{
+    width: 60px;
+}
+/*navbar links styling*/
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links ul a:hover {
+    opacity: .6;
+}
+
+.navbar-links li {
+    list-style: none;
+    color: rgb(255, 255, 255);
+    font-family: 'Kanit', sans-serif;
+    padding: 14px 0px;
+    margin: 0 30px;
+    font-size: 16px;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 1rem;
+}
+/*navbar toggle button styling*/
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    border-radius: 10px;
+}
+/*navbar dropdown animation*/
+@media (max-width: 1000px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+/* HOME PAGE */
+.home-header {
+    border-radius: 25px;
+    width: 98%;
+    margin-top: 20px;
+    background: url('./images/main-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 20px rgb(171, 171, 171);
+    /* text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5); */
+    /* box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5); */ 
+}
+/*home header background styling*/
+.home-head {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+    padding: 8px;
+}
+/*navbar background styling*/
+.nav-bg {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 25px;
+    padding: 2px;
+}
+/*home header text styling*/
+.home-text {
+    text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+}
+/*artist introduction styling*/
+.meet-artist {
+    background-image: url('https://res.cloudinary.com/dhrs5mwhz/image/upload/v1655319640/Shirley%27s%20Studio/anna-kolosyuk-D5nh6mCW52c-unsplash_thqhbp.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    border-radius: 25px;
+}
+/*artist section image styling*/
+.card {
+    background-image: url('https://res.cloudinary.com/dhrs5mwhz/image/upload/v1655272698/Shirley%27s%20Studio/277046047_453752629873539_3657208787386032048_n_a0mpdm.jpg');
+    background-size: cover;
+    width: 400px;
+    height: 430px;
+    padding-bottom: 20px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 0 10px rgb(161, 161, 161);
+    display: flex;
+    justify-content: end;
+}
+/*artist section text/background styling*/
+.card-description {
+    background-color: rgba(132, 132, 132, 0.094);
+    border-radius: 25px;
+}
+/*home gallery section styling*/ 
+.home-gallery-section {
+    background:rgb(255, 255, 255);
+    background-size: cover;
+    color: rgb(0, 0, 0);
+    border-radius: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+/*home featured collectiong section styling*/
+.section-collections {
+    background:#eeeeeec4;
+    border-radius: 25px;
+    margin: 0 auto;
+    margin-left: 10px;
+    margin-right: 10px;
+   
+}
+/*image containers styling*/
+.container-box-three {
+    height:290px;
+    width: 380px;
+    margin: 80px 20px;
+    padding: 10px 10px;
+    border: 1px solid rgb(150, 150, 150);
+    border-radius: 25px;
+}
+/*images gallery/collections*/
+#galleryOne, #galleryTwo, #galleryThree, #landscape, #seascape, #floral {
+    background-size: cover;
+    border: none;
+    box-shadow: 0 0 20px rgb(222, 222, 222);
+    box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+}
+
+#galleryOne {
+    background-image: url('https://res.cloudinary.com/dhrs5mwhz/image/upload/v1655263891/Shirley%27s%20Studio/285081783_468216644970664_5732425920885291214_n_wyzdqd.jpg');
+}
+
+#galleryTwo {
+    background-image: url('https://res.cloudinary.com/dhrs5mwhz/image/upload/v1655263891/Shirley%27s%20Studio/285726002_1367898310390695_2889435705824111658_n_xijwk9.jpg');
+}
+
+#galleryThree {
+    background-image: url('https://res.cloudinary.com/dhrs5mwhz/image/upload/v1657042266/Shirley%27s%20Studio/IMG_8197_iddl6k.jpg');  
+}
+
+#landscape {
+  background-image: url('https://res.cloudinary.com/dhrs5mwhz/image/upload/v1657042271/Shirley%27s%20Studio/IMG_8206_mqnics.jpg');
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+}
+
+#seascape {
+  background-image: url('https://res.cloudinary.com/dhrs5mwhz/image/upload/v1655263891/Shirley%27s%20Studio/285081783_468216644970664_5732425920885291214_n_wyzdqd.jpg');
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+}
+
+#floral {
+ background-image: url('https://res.cloudinary.com/dhrs5mwhz/image/upload/v1657042275/Shirley%27s%20Studio/calla-lily-trio.jpg');
+ box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+}
+/*images hover effect gallery/collections*/
+#galleryOne:hover, #galleryTwo:hover, #galleryThree:hover, #landscape:hover, #seascape:hover, #floral:hover {
+    transform: scaleX(1.04);
+    transition: transform 0.75s ease-in-out;
+    box-shadow: 0 0 30px rgb(155, 155, 155);
+    cursor: pointer;  
+}
+
+/*HOME BUTTONS */
+.main-btn {
+    color: rgb(255, 255, 255);
+    background: #023047;
+    font-size: 12px;
+    padding: 8px 18px;
+    border: 1.5px solid #023047;
+}
+
+.main-btnReverse {
+    color: white;
+    font-size: 12px;
+    padding: 6px 15px;
+    border: 1.5px solid white;
+}
+
+.main-btn:hover {
+    color: rgb(0, 0, 0);
+    padding: 8px 18px;
+    font-size: 12px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.main-btnReverse:hover {
+    color: rgb(0, 0, 0);
+    background-color: white;
+    font-size: 12px;
+    padding: 6px 15px;
+    border: 1.5px solid white;
+}
+
+/* FOOTER */
+footer {  
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 50px;
+    background-image: linear-gradient(45deg, rgb(84, 170, 255), rgb(216, 61, 216), rgb(255, 106, 106)); 
+}
+/*footer signature text*/
+.footer-signature {
+    font-family: 'Marck Script', cursive;
+    font-size: 4vw;
+}
+/*main footer styling*/
+.light-footer {
+    color: rgb(166, 166, 166);
+    padding-top: 60px;
+    padding-bottom: 20px;
+    margin-bottom: 15px;
+    background:#edf2f4;
+    font-size: 15px;
+    border-radius: 25px;
+    box-shadow: 0 10px 20px rgb(202, 202, 202);
+    z-index:9999;
+    position:relative;
+    box-shadow: 0 10px 20px rgb(198, 198, 198);
+}
+
+.footer-bottom {
+    margin-top: 50px; 
+}
+/*footer links styling*/
+.light-footer a {
+    color: rgb(166, 166, 166);
+}
+
+.light-footer a:hover {
+   opacity: .6;
+}
+
+#layerLabs {
+    font-family: 'Kanit', sans-serif;
+    font-size: 12px;    
+}
+
+/* COOKIE CONSENT */
+#consent-popup {
+    width: 350px;
+    position: fixed;
+    bottom: 10px; right: 20px;
+    z-index: 1000;
+    background: #fff;
+    border-radius: 25px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, .2);
+    text-align: center;
+    padding: 30px;
+}  
+
+.hidden {
+    opacity: 0;
+}
+
+#consent-popup img {
+height: 110px;
+animation: image 10s linear infinite;
+}
+/*cookie consent popup image animation*/
+@keyframes image {
+0%{
+    transform: rotate(360deg);
+}
+}
+
+#consent-popup h3 {
+color: #333;
+font-size: 18px;
+padding: 5px 0;
+}
+
+#consent-popup p {
+color: #666;
+font-size: 12px;
+padding: 0px 0;
+line-height: 1.8;
+}
+
+#consent-popup #accept {
+background: #05668d;
+color: #fff;
+border-radius: 5px;
+display: block;
+margin: 15px 0;
+padding: 10px;
+}
+
+#consent-popup #accept:hover {
+letter-spacing: 1px;
+opacity: .6;
+}
+
+#consent-popup .close-btn {
+position: absolute;
+top: -2px; right: 12px;
+font-size: 40px;
+color: #999;
+cursor: pointer;
+}
+
+#consent-popup .close-btn:hover {
+color: #333;
+} 

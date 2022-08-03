@@ -1,0 +1,48 @@
+<!--ejs partials head/navbar/flash-->
+<%- include('../partials/head') %> 
+<%- include('../partials/navbar') %> 
+<%- include('../partials/flash') %> 
+
+<!--back button-->
+<main class="container-fluid my-5">
+  <div class="my-4 ml-5 px-5">
+     <a class="btn main-btn" href="javascript:history.back()"><i class="fa-solid fa-chevron-left px-2"></i>GO BACK</a> 
+  </div>
+
+ <!--show page container-->
+ <section class="container-fluid my-5 card-description px-5">
+     <div class="row">
+          <div class="col-md-6 order-1 order-md-1">
+               <div class="p-5 d-flex align-items-center">
+                  <!--accessing painting image id -->
+                  <img src="<%= painting.image %>" class="responsive card-show" alt="Painting show image">
+               </div>
+            </div>
+            <div class="col-md-6 px-5 order-2 order-md-2 text-center my-auto  py-5">
+               <h2 class="pb-5"><%= painting.title %> </h2>
+               <p class="py-5"><%= painting.description %></p>
+               <% if(painting.isAvailable === true) { %> 
+               <h3>€ <%= painting.price %> </h3>
+               <% }else {%> 
+               <h6>NOT AVAILABLE</h6>
+               <% } %> 
+               <!--if painting is avialable show add to cart button-->
+               <% if(painting.isAvailable === true) {%> 
+               <a href="<%= painting.stripe_link %>  " class="btn btn-primary mb-auto col-4 my-5">BUY</a>
+               <!--else show sold-->
+               <% } else { %> 
+               <button class="btn btn-secondary col-4 my-5" disabled>SOLD</button>
+               <% } %> 
+            </div>
+        </div>
+  </section>
+</main>
+
+
+<!-- ejs partials cookie consernt/scripts/footer-->
+<%- include('../partials/cookieConsent') %> 
+<%- include('../partials/scripts') %>
+<%- include('../partials/footer') %> 
+</main>
+</body>
+</html>

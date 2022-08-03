@@ -1,0 +1,176 @@
+<!--ejs partials head/navbar/flash-->
+<%- include('../partials/head') %> 
+<%- include('../partials/navbar') %> 
+<%- include('../partials/flash') %> 
+
+<!--gallery header image-->
+<section class="container-fluid header-section-gallery text-center py-5">
+  <div class="container-fluid text-center">
+    <h1 class="h1-upper mb-5 bounceIn" style="color: rgb(0, 0, 0);font-size: 6.5vw;opacity: .6;">Gallery</h1>
+  </div>
+</section>
+
+<!--gallery title-->
+<section class="container-fluid mt-5 py-5">
+  <h1 class="text-center" style="font-size: 60px;">Featured Collections</h1>
+</section>
+
+<!--gallery collections container landscapes-->
+
+<main class="dark-section pb-3">
+  <section class="container-fluid mb-5">
+    <h1 class="py-5 h1-upper text-center">Landscapes</h1>
+    <div class="row" id="">
+      <!--grabbing 3 paintings from paintings data by slicing at index-->
+      <% for(let painting of paintings.slice(0,3)) {%>
+      <!--if paintings type is landscape show=>-->
+      <% if(painting.type = 'landscape') {%> 
+      <div class="col-lg-4 d-flex align-items-center justify-content-center img-three img-wrapper my-3" id="card">
+        <div class="card painting-item px-4 d-flex align-items-center" data-item-id="<%= painting.id %> ">
+          <!--utilizing onmouseover to show image setting using second image of model when user hovers over main image-->
+          <a href="/gallery/<%= painting.id %>"><img src="<%= painting.image %> " onmouseover="this.src='<%= painting.img %>'" onmouseout="this.src='<%= painting.image %>'" style="width: 400px; height: 400px; background-size: contain;" class="img-fluid responsive py-5" id="galleryImg" alt="Landscape painting"></a>
+          <div class="row">
+            <h5 class="text-center pb-2"> <%= painting.title %> </h5>
+            <% if(painting.isAvailable === true) {%> 
+            <h3 class="text-center">€ <%= painting.price %></h3>
+            <% }else {%> 
+            <h6 class="text-center">Not Available</h6>
+            <% } %> 
+            <a href="/gallery/<%= painting.id %> " class="btn btn-outline-secondary mt-3">PREVIEW</a>
+            <% if(painting.isAvailable === true) {%> 
+            <a href="<%=painting.stripe_link%>" class="btn btn-primary my-3" id="add">BUY</a>
+            <% }else {%> 
+            <button class="btn btn-secondary my-3" disabled>SOLD</button>
+            <% } %> 
+          </div>
+        </div>
+      </div>
+      <div class="modal">
+        <div class="modal-img">
+          <img src="#"
+              alt=""
+            />
+          </div>
+        </div>
+        <% } %> 
+        <% } %>
+      </div>
+      <div class="d-flex justify-content-center">
+        <a href="/gallery/landscape" class="btn btn-outline-dark px-5">VIEW ALL</a>
+      </div>                
+    </div>
+  </section>
+</main>
+
+<!--gallery collections container seascapes-->
+<section class="container-fluid py-3 my-3">
+  <h1 class="py-5 h1-upper text-center">Seascapes</h1>
+  <div class="row" id="">
+    <!--grabbing 3 paintings from paintings data by slicing at index-->
+    <% for(let painting of paintings.slice(26,29)) {%>
+    <!--if paintings type is seascape show=>-->
+    <% if(painting.type = 'seascape') {%> 
+    <div class="col-lg-4 col-sm-12 d-flex align-items-center justify-content-center img-three img-wrapper my-3" id="card">
+      <div class="card px-4 d-flex align-items-center" data-item-id="<%= painting.id %> ">
+        <!--utilizing onmouseover to show image setting using second image of model when user hovers over main image-->
+        <a href="/gallery/<%= painting.id %>"><img src="<%= painting.image %> " onmouseover="this.src='<%= painting.img %>'" onmouseout="this.src='<%= painting.image %>'" style="width: 400px; height: 400px; background-size: contain;" class="img-fluid responsive py-5" id="galleryImg" alt="Seascape painting"></a>
+        <div class="row">
+          <h5 class="text-center pb-2"> <%= painting.title %> </h5>
+          <% if(painting.isAvailable === true) {%> 
+          <h3 class="text-center">€ <%= painting.price %></h3>
+          <% }else {%> 
+          <h6 class="text-center">Not Available</h6>
+          <% } %> 
+          <a href="/gallery/<%= painting.id %> " class="btn btn-outline-secondary mt-3">PREVIEW</a>
+          <% if(painting.isAvailable === true) {%> 
+          <a href="<%=painting.stripe_link%>" class="btn btn-primary my-3" id="add">BUY</a>
+          <% }else {%> 
+          <button class="btn btn-secondary my-3" disabled>SOLD</button>
+          <% } %> 
+        </div>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal-img">
+        <img src="#"
+          alt=""
+        />
+      </div>
+    </div>
+    <% } %> 
+    <% } %>
+    <div class="d-flex justify-content-center my-3">
+      <a href="/gallery/seascape" class="btn btn-outline-dark px-5">VIEW ALL</a>
+    </div>
+  </div>                 
+</section>
+
+<!--gallery collections container floral-->
+<main class="container-fluid dark-section pb-3 mt-5">
+<section class="container-fluid my-5">
+  <h1 class="py-5 h1-upper text-center">Floral</h1>
+  <div class="row" id="">
+    <!--grabbing 3 paintings from paintings data by slicing at index-->
+     <% for(let painting of paintings.slice(37,40)) {%>
+        <!--if paintings type is floral show=>-->
+      <% if(painting.type = 'seascape') {%>
+      <div class="col-lg-4 col-sm-12 d-flex align-items-center justify-content-center img-three img-wrapper my-3" id="card">
+        <div class="card px-4 d-flex align-items-center" data-item-id="<%= painting.id %> ">
+          <!--utilizing onmouseover to show image setting using second image of model when user hovers over main image-->
+           <a href="/gallery/<%= painting.id %>"><img src="<%= painting.image %> " onmouseover="this.src='<%= painting.img %>'" onmouseout="this.src='<%= painting.image %>'" style="width: 400px; height: 400px; background-size: contain;" class="img-fluid responsive py-5" id="galleryImg" alt="Floral Painting"></a>
+           <div class="row">
+           <h5 class="text-center pb-2"> <%= painting.title %> </h5>
+           <% if(painting.isAvailable === true) {%> 
+           <h3 class="text-center">€ <%= painting.price %></h3>
+           <% }else {%> 
+            <h6 class="text-center">Not Available</h6>
+            <% } %> 
+           <a href="/gallery/<%= painting.id %> " class="btn btn-outline-secondary mt-3">PREVIEW</a>
+           <% if(painting.isAvailable === true) {%> 
+            <a href="<%=painting.stripe_link%>" class="btn btn-primary my-3" id="add">BUY</a>
+           <% }else {%> 
+            <button class="btn btn-secondary my-3" disabled>SOLD</button>
+            <% } %> 
+           </div>
+           </div>
+       </div>
+       <div class="modal">
+        <div class="modal-img">
+          <img src="#"
+            alt=""
+          />
+        </div>
+      </div>
+      <% } %> 
+       <% } %>
+       </div>
+        </div>
+        <div class="d-flex justify-content-center mt-3">
+          <a href="/gallery/floral" class="btn btn-outline-dark px-5">VIEW ALL</a>
+          </div>
+  </div>                  
+</section>
+</main>
+
+<!--scroll up navigation toggle-->
+<!-- <div class="d-flex justify-content-end grey-container px-3" style="background-color: white;">
+<a class="btn scroll-top px-3 py-3" href="#"><i class="fa-solid fa-arrow-up"></i></a>
+</div> -->
+
+<!--contact section-->
+<section class="py-5 mb-2">
+<div class="container">
+<h2 style="color: #023047;" class="text-center py-5">Interested in my paintings?</h2>
+</div>
+<div class="container d-flex justify-content-center">
+<a href="/contact" class="main-btn btn">GET IN TOUCH <i class="fa-solid fa-chevron-right"></i></a>
+</div>
+</section>
+
+<!-- ejs partials cookie consernt/scripts/footer-->
+<%- include('../partials/cookieConsent') %> 
+<%- include('../partials/scripts') %>
+<%- include('../partials/footer') %>  
+</main>
+</body>
+</html>

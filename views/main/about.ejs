@@ -1,0 +1,59 @@
+<!--ejs partials head/navbar-->
+<%- include('../partials/head') %> 
+<%- include('../partials/navbar') %> 
+
+<!--about section header-->
+<section class="container-fluid header-section-gallery text-center">
+    <div class="container text-center py-5">
+        <h1 class=" h1-upper mb-5 bounceIn" style="color: rgb(0, 0, 0);font-size: 6.5vw;opacity: .6;" id="">Artist Profile</h1>
+        <h4 style="color: white;"></h4>
+    </div>
+</section>
+
+<!--about artist section-->
+<section class="container-fluid about-section background-about mt-3" style="background-color: #ffffff;">
+    <div class="container-fluid">
+        <div class="row">                
+            <div class="content-column col-lg-6 col-md-12 col-sm-12 order-2">
+                <div class="inner-column container-fluid">
+                    <div class="sec-title">
+                        <span class="title" style="color: rgb(120, 120, 120);">ABOUT THE ARTIST</span>
+                        <h2 class="" style="color: black;">Shirley Hackett</h2>
+                    </div>
+                    <p class="px-3" style="font-weight: bold;">I am an Irish artist living and working from my studio in Kildare.
+                        I have always been passionate about art in all its forms and I take my inspiration from the natural beauty of 
+                        the world that surrounds us. I enjoy painting a variety of subjects, particulary landscapes, seascapes and flowers.
+                        I try to create an interesting composition and bring it to life by capturing the effects of light and shade. 
+                        My paintings are inspired by the rugged landscapes of Ireland and the vibrant colours that emanate from its natural
+                        beauty throughout the seasons. I strive to visually capture and record special moments, people and places in time
+                        and home that the viewer will engage and connect emotionally with the images that emerge on the canvas. I work mostly
+                        in acrylics using bold bright colours to create a sense of light and atmosphere in my paintings. I have 
+                        exhibited my work in a number of venues in Kildare and Dublin. If you have something of personal interest which
+                        you would like to see on canvas I am happy to accept commisions. 
+                    </p>
+                    <div class="py-5  mx-3">
+                        <a href="/contact" class="btn main-btn">GET IN TOUCH <i class="fa-solid fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="image-column col-lg-6 col-md-12 col-sm-12">
+                <div class="inner-column wow fadeInLeft">
+                    <figure class="image-1"><a href="#" class="lightbox-image responsive" data-fancybox="images"><img src="https://res.cloudinary.com/dhrs5mwhz/image/upload/v1655272698/Shirley%27s%20Studio/277046047_453752629873539_3657208787386032048_n_a0mpdm.jpg" alt="artist photo"></a></figure>
+                    <figure class="image-2"><a href="#" class="lightbox-image responsive" data-fancybox="images"><img src="https://res.cloudinary.com/dhrs5mwhz/image/upload/v1655263891/Shirley%27s%20Studio/285726002_1367898310390695_2889435705824111658_n_xijwk9.jpg" style="width: 230px; height: 260px;" alt="painting photo"></a></figure>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</section>
+<%- include('../partials/footer') %> 
+
+
+<!-- ejs partials cookie consernt/scripts->
+<%- include('../partials/cookieConsent') %> 
+<%- include('../partials/scripts') %>
+
+
+</main>
+</body>
+</html>
